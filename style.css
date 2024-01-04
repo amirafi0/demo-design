@@ -1,136 +1,112 @@
-  ami 
-  version1
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
 
-    
-    
-    
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(49, 116, 119);
+    padding: 10px;
+}
 
-    
+.task{
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px;
+    border-radius: 10px;
+}
 
+.task h2{
+    color: rgb(2, 84, 65);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}   
 
-    
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
 
+.box input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}   
     
+.box button{
+    border: none;
+    outline: none;
+    padding: 15px 50px ;
+    background: #61087c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
     
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}   
     
-    
-    
-    
+ul li:before{
+    content: " ";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 
-    
-    
-
-
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-
-
-
-    
-
-
-
-    
-    
-
-    
-    
-    
-   
-
-
-
-    
-    
-
-    
-    
-    
-
-    
-   
-
-
-
-    
-    
-
-    
-    
-    
-
-    
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    
+}  
 
 
+ul li .selected{
+    color: #555;
+    text-decoration: line-through;
 
+}
+    
+ul li.selected::before{
+    background-image: url(checked.png);
+}    
 
-    
+ul li span{
+    position: absolute;
+    right: 0;
+    top:  5px;
+    height:  40px ;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
 
+}   
     
-    
-    
-    
-    
-    
-
-    
-    
-
-
-
-    
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-
-
-
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-
+ul li span:hover{
+    background: gray;
+}    
 
