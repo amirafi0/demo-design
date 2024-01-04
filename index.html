@@ -10,109 +10,39 @@
    <link rel="stylesheet"
    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
  </head>
- 
- 
  <body>
-   
- 
- <h1 id="a"> Welcome</h1>
 
-    
-<button onclick="document.getElementById('a').innerHTML='hoga'"> click me </button> 
 
-<button onclick="document.getElementById('a').style.color='blue'"> color </button> 
-   <br><br>
-
-<img id="im" src="image.jpg.jpg" height="300px" >      
- <br> <br>   
-
-<button onclick="document.getElementById('im').src='me4.jpg'">bridge</button>    
-<button onclick="document.getElementById('im').src='me5.jpg'">ccn</button>    
-<button onclick="document.getElementById('im').src='me6.jpg'">bagan</button>    
-
-<p id="r"> </p>
-    
-
-    
-    
- <button onclick="console.log(`cart is: ${cart}`)">show</button> 
- 
- 
- <button onclick="cart=cart+1
- console.log(`cart is: ${cart}`)">add</button>  
- <button onclick="cart=cart+2
- console.log(`cart is: ${cart}`)">+2</button>     
-    
   
-    
-    
+   <div class="container">
 
-    
-    
-
-
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    
+  <div class="task">
+      <h2> Task List
+        <i class='bx bx-list-ol'></i>
+      </h2>
 
 
+   <div class="box">
+      <input type="text" class="input-box" placeholder="Add Task">
+      <button onclick="addTask()"> Add</button>
 
-    
-
-
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    
-
-
-
-
-
-    
-    
-
-    
-    
-    
-           
-    
+   </div>  
    
+   <ul class="task-list">
+      <li class="selected">Task 1</li>
+     <li></li>
+     <li></li> 
+   </ul>
 
+  </div>
 
-
-    
-    
-
-    
-    
-    
-
+</div>
+ 
 
 
     
 <script src="/index.js">
 
-
-
-  
 </script>
 </body>
 
