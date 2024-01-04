@@ -1,40 +1,46 @@
-var x;
-x=10;
+const inputbox= document.querySelector('.input-box');
+const tasklist= document.querySelector('.task-list')
+
+function addTask(){
+    if(inputbox.value === ''){
+        alert('Input box can not be empty');
+    }
+    else{
+        let li=document.createElement('li');
+        li.innerHTML= inputbox.value;
+        tasklist.appendChild(li);
+
+        let span= document.createElement('span');
+        span.innerHTML= '\u00d7'
+        li.appendChild(span)
+    }
+    inputbox.value='';
+
+    data();
+}
+
+tasklist.addEventListener('click', function(e){
+    if(e.target.tagName === 'LI'){
+        e.target.classList.toggle('checked');
+        data()
+    }
+    else if( e.target.tagName === 'SPAN'){
+        e.target.parentElement.remove();
+        data()
+    }
+}, false);
 
 
+function data(){
+    localStorage.setItem('data', tasklist.innerHTML);
+}
 
-document.getElementById('r').innerHTML=x;
-
-
-
-
-let cart=0;
-
-if (19>18) {
-    console.log('u can mary');
+function show(){
+    tasklist.innerHTML =localStorage.getItem('data');
 }
 
 
-
-let marks=Number(`78`)
-
-if (marks>=80 ){
-    console.log(`jon get A+`)
-}
-else if (marks>=60  && marks<79){
-    console.log(`jon get A`)
-} 
-else if (marks>50 && marks<59){
-    console.log(`jon get B`)
-}
-
-else {
-    console.log(`jon get F`)
-}
-
-
-
-
+show();
 
 
 
